@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.superapp.general.GeneralFragment
+import com.example.superapp.textView.TextViewFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +20,13 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container_view, GeneralFragment())
             .commitNow()
+    }
+
+    fun openTextViewScreen(){
+        supportFragmentManager.beginTransaction()
+                .add(R.id.fragment_container_view, TextViewFragment())
+                .addToBackStack(null)
+                .commit()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

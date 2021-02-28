@@ -5,9 +5,10 @@ import android.view.View
 import androidx.appcompat.app.ActionBar
 import androidx.fragment.app.Fragment
 import com.example.superapp.R
+import com.example.superapp.base.BaseViewInterface
 import com.example.superapp.databinding.TextViewFragmentBinding
 
-class TextViewFragment: Fragment(R.layout.text_view_fragment) {
+class TextViewFragment: Fragment(R.layout.text_view_fragment), BaseViewInterface {
     private var fragmentTextViewtBinding: TextViewFragmentBinding? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
